@@ -17,7 +17,7 @@ def incoming_SMS():
     if body in flashCards:
     	resp.message(flashCards[body][0] + ": " + flashCards[body][1])
     else:
-    	resp.message("Hello! Welcome to Eko's SMS Flashcards! \n Enter one of the letters to get a definition: \n")
+    	resp.message("Hello! Welcome to Eko's SMS Flashcards! Please enter A, B, C, or D to see some of our terms")
 
     return str(resp)
 
