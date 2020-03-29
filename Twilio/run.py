@@ -4,7 +4,7 @@ from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
-flashCards = {"1": ("term1", "definition1"), "2" : ("term2", "definition2"), "3": ("term3", "definition3"), "4": ("term4", "definition4")}
+flashCards = {"1": ("Malade", "Feebar"), "2" : ("Parle", "Wax"), "3": ("Propre", "Cet")}
 
 @app.route("/sms", methods=['GET', 'POST'])
 def incoming_SMS():
@@ -20,10 +20,9 @@ def incoming_SMS():
     	resp.message(flashCards[body][0] + ": " + flashCards[body][1])
     else:
     	resp.message("""Hello! Welcome to Eko's SMS Flashcards! Please enter a number from below to see a definition: 
-    	1) term1
-    	2) term2
-    	3) term3
-    	4) term4
+    	1) Malade
+    	2) Parle
+    	3) Propre 
 
 Send H for help
     		""")
