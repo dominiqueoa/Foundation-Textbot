@@ -2,7 +2,8 @@
 This is a prototype of a potential product for USAID. We believe they may be interested in a text based flash card system to reach technologically challenged areas.
 
 ## Running the example
-1. Run `python run.py`.
+1. Run `python run.py` on the command line.
+2. Open a separate terminal and run the following command: `twilio phone-numbers:update "+12054486159" --sms-url="http://localhost:5000/sms"`.
 2. Text the following number: +1(205)-448-6159
 
 ## Getting Started
